@@ -1,0 +1,356 @@
+       /* Base Colors */
+/* Base Colors */
+:root {
+    --white: #ffffff;
+    --light-gray: #ffffff09;
+    --medium-gray: #e6e6e6;
+    --gray: #95A5A6;
+    --dark-gray: #000000e7;
+}
+
+/* General body styling */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply Roboto Slab font to all headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'system-ui', serif !important;
+    font-weight: 600; /* Adjust weight if needed */
+}
+
+/* Header Section */
+header {
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.514);
+}
+
+.header-logo {
+    width: 80px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+ 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--gray);
+}
+
+/* Hero Section */
+#home {
+    background-image: url('/assets/Untitled design (13).svg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 250px 0;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+    color: #000000;
+}
+
+#home p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Services Section */
+#services {
+    background-color: var(--white);
+    padding: 60px 0;
+}
+
+#services h2 {
+    font-size: 2rem;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card-body p {
+    color: var(--gray);
+    font-weight: 300;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* About Section */
+#about {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 60px 0;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#about p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--white);
+    padding: 60px 0;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact form .form-control {
+    border-radius: 10px;
+    border: 1px solid var(--medium-gray);
+    box-shadow: none;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+#contact form .form-control:focus {
+    border-color: var(--dark-gray);
+}
+
+#contact button {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: var(--gray);
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card-body h5 {
+        font-size: 1.2rem;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* CSS for image overlay */
+.image-overlay {
+    position: relative;
+}
+
+.image-overlay img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with opacity */
+    z-index: 1;
+}
+
+.card-body {
+    position: relative;
+    z-index: 2;
+}
+
+/* About Section Flexbox Layout */
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text {
+    width: 60%;
+}
+
+.image img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+/* Mobile-friendly adjustments */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .text, .image {
+        width: 100%;
+        text-align: center;
+    }
+    .image img {
+        width: 80%;
+    }
+}
+
+/* Additional Sections */
+#outreach, #minority-business, #coverage {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#outreach h2, #minority-business h2, #coverage h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#outreach .row, #minority-business .row, #coverage .row {
+    justify-content: center;
+}
+
+#coverage img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#outreach p, #minority-business p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* Mobile-friendly adjustments for outreach and minority business sections */
+@media (max-width: 768px) {
+    #outreach p, #minority-business p {
+        text-align: center;
+    } }
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+        background-color: var(--light-gray);
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Apply Roboto Slab font to all headers */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'system-ui', serif !important;
+        font-weight: 600; /* Adjust weight if needed */
+    }
+    
+    /* Header Section */
+    header {
+        background-color: var(--white);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.514);
+    }
+    /* Remove default underline */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+}
+
+/* Create the line under the nav link */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #00000075; /* Line color */
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* On hover, expand the line */
+.nav-link:hover::after {
+    width: 100%; /* Make the line full width of the link */
+}
+
+/* Optional: Add a little padding to the bottom of the link to prevent the line from touching text */
+.nav-link {
+    padding-bottom: 5px;
+}
