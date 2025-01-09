@@ -56,22 +56,6 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
-#home {
-    background-image: url('/assets/Untitled design (13).svg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-    padding: 250px 0;
-    text-align: center;
-}
-
-#home h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-family: 'Roboto Slab', serif;
-    color: #000000;
-}
 
 #home p {
     font-size: 1.2rem;
@@ -211,33 +195,6 @@ footer {
     }
 }
 
-/* CSS for image overlay */
-.image-overlay {
-    position: relative;
-}
-
-.image-overlay img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-overlay::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with opacity */
-    z-index: 1;
-}
-
-.card-body {
-    position: relative;
-    z-index: 2;
-}
-
 /* About Section Flexbox Layout */
 #about .container {
     display: flex;
@@ -353,4 +310,22 @@ footer {
 /* Optional: Add a little padding to the bottom of the link to prevent the line from touching text */
 .nav-link {
     padding-bottom: 5px;
+}
+#home {
+    background-image: url('assets/couch.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 250px 0;
+    text-align: center;
+}
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+    color: #000000;
+}
+#home {
+    background-image: url('assets/Untitled design (45).png') !important;
 }
